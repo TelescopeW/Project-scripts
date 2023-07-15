@@ -7,14 +7,12 @@ output_dir = "/Users/H/Desktop/ensemble_dock/"
 # Load the input PDB file
 pymol.cmd.load("/Users/H/Desktop/ensemble_dock/spike_chain_seg_modified.pdb", "protein")
 
-# Select residue 501 in chain B
-pymol.cmd.select("residue_501", "chain B and resi 501")
-
-# Perform mutagenesis on residue 501
+# Select residue 477 in chain B
+pymol.cmd.select("residue_477", "chain B and resi 477")
 pymol.cmd.wizard("mutagenesis")
-pymol.cmd.get_wizard().do_select("residue_501")
+pymol.cmd.get_wizard().do_select("residue_477")
 pymol.cmd.get_wizard().set_mode("ASN")
-pymol.cmd.frame(i)
+pymol.cmd.frame(1)
 pymol.cmd.get_wizard().apply()
 
 # Get the list of mutant conformations
