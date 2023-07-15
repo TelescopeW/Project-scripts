@@ -14,6 +14,7 @@ pymol.cmd.get_wizard().do_select("residue_477")
 pymol.cmd.get_wizard().set_mode("ASN")
 pymol.cmd.frame(1)
 pymol.cmd.get_wizard().apply()
+pymol.cmd.save("conformation1")
 
 # Get the list of mutant conformations
 conformations = pymol.cmd.get_object_list("mutant*")
